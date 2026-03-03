@@ -1,34 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.tsx
 import "./globals.css";
+import { ReactNode } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Invisible Grilles & UPVC Windows | Your Company Name",
-  description: "Premium Invisible Grilles, UPVC Windows, Interior & Exterior Solutions. High quality installation services.",
+export const metadata = {
+  title: "VIKISHA Invisible Grills | Best Invisible Grills in Visakhapatnam",
+  description:
+    "VIKISHA provides premium invisible grills in Visakhapatnam. Balcony safety, window protection, rust-free stainless steel installation. Call 7386194588.",
+  keywords:
+    "Invisible Grills Visakhapatnam, Balcony Safety Grills Vizag, Window Safety Grills Visakhapatnam, Stainless Steel Invisible Grills",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

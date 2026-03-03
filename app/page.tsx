@@ -1,24 +1,19 @@
-export const metadata = {
-  title: "VIKISHA Invisible Grills | Best Invisible Grills in Visakhapatnam",
-  description:
-    "VIKISHA provides premium invisible grills in Visakhapatnam. Balcony safety, window protection, rust-free stainless steel installation. Call 7386194588.",
-  keywords:
-    "Invisible Grills Visakhapatnam, Balcony Safety Grills Vizag, Window Safety Grills Visakhapatnam, Stainless Steel Invisible Grills",
-};
+"use client";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}
+import { motion } from "framer-motion";
+import SharedContent from "../components/SharedContent";
+import Gallery from "../components/Gallery";
 
 export default function Home() {
+  const images = [
+    { src: "/images/invisible1.jpg", title: "Balcony Grill 1" },
+    { src: "/images/invisible2.jpg", title: "Balcony Grill 2" },
+    { src: "/images/invisible3.jpg", title: "Window Grill 1" },
+    { src: "/images/invisible4.jpg", title: "Window Grill 2" },
+    { src: "/images/invisible5.jpg", title: "High-Rise Installation" },
+    { src: "/images/invisible6.jpg", title: "Children Safety" },
+  ];
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
 
@@ -28,7 +23,7 @@ export default function Home() {
         <div className="absolute w-96 h-96 bg-blue-600/30 blur-3xl rounded-full bottom-10 right-10 animate-pulse"></div>
       </div>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="text-center py-32 px-6">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -65,6 +60,7 @@ export default function Home() {
           <a
             href="https://wa.me/917386194588"
             target="_blank"
+            rel="noopener noreferrer"
             className="px-10 py-4 border border-white rounded-full hover:bg-white hover:text-black transition"
           >
             WhatsApp Us
@@ -91,6 +87,14 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Interactive Gallery Section */}
+      <section className="py-24">
+        <Gallery images={images} />
+      </section>
+
+      {/* Shared About & Contact Section */}
+      <SharedContent />
+
       {/* Strong CTA */}
       <section className="py-24 text-center bg-gradient-to-r from-purple-700 to-blue-700">
         <h3 className="text-3xl md:text-4xl font-bold mb-6">
@@ -114,6 +118,7 @@ export default function Home() {
       <a
         href="https://wa.me/917386194588"
         target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-xl"
       >
         WhatsApp
