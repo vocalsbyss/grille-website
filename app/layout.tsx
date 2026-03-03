@@ -1,6 +1,6 @@
-// app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
+import Navbar from "../.next/components/Navbar";
 
 export const metadata = {
   title: "VIKISHA Invisible Grills | Best Invisible Grills in Visakhapatnam",
@@ -13,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="scroll-smooth">
+        <Navbar />
+        <div className="pt-20">{children}</div> {/* padding to offset navbar */}
+      </body>
     </html>
   );
 }

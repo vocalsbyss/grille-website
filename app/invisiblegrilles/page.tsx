@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SharedContent from "../../components/SharedContent";
+import SharedContent from "../../.next/components/SharedContent";
 
 export default function InvisibleGrills() {
   return (

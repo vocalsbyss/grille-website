@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SharedContent from "../components/SharedContent";
-import Gallery from "../components/Gallery";
+import SharedContent from "../.next/components/SharedContent";
+import Gallery from "../.next/components/Gallery";
 
 export default function Home() {
   const images = [
