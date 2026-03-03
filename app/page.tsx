@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export const metadata = {
   title: "VIKISHA Invisible Grills | Best Invisible Grills in Visakhapatnam",
   description:
@@ -9,6 +5,18 @@ export const metadata = {
   keywords:
     "Invisible Grills Visakhapatnam, Balcony Safety Grills Vizag, Window Safety Grills Visakhapatnam, Stainless Steel Invisible Grills",
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
 
 export default function Home() {
   return (
